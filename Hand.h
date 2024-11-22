@@ -8,30 +8,32 @@ using namespace std;
 #include <vector>
 #include "Card.h"
 #include "Deck.h"
-
-
-class Hand {
+class Hand
+{
 private:
     vector<Card> cards;
-    int total =0;
+    int total = 0;
+
 public:
-    Hand(){};
-    void addCard(Card card) {
+    Hand() {};
+    void addCard(Card card)
+    {
         cards.push_back(card);
-        total+=card.getValue();
-        //need ideas for dynamically deciding if an Ace is 1 or 11. Got nothing atm.
+        total += card.getValue();
+        // need ideas for dynamically deciding if an Ace is 1 or 11. Got nothing atm.
     }
-    void reset() {
+    void reset()
+    {
         cards.clear();
     }
-    void display() {
-        for (Card card : cards) {
-            cout << card.getSymbol() << ", "<<card.getValue()<<", "<< card.getSuit() << endl;
+    void display()
+    {
+        for (Card card : cards)
+        {
+            cout << ", " << card.getValue();
         }
-        cout<<total;
+        cout << total;
     }
 };
 
-
-
-#endif //HAND_H
+#endif // HAND_H

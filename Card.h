@@ -5,37 +5,34 @@
 #define CARD_H
 #include <string>
 
-namespace std {
+namespace std
+{
 
-class Card {
-private:
-    int value;
-    string suit;
-    string symbol;
-    string imageFilePath;
+    class Card
+    {
+    private:
+        int value;
+        string imageFilePath;
+
     public:
-    Card(int inVal, string inImageFilePath, string inSuit, string inSymbol) {
-        value = inVal;
-        imageFilePath = inImageFilePath;
-        suit = inSuit;
-        symbol = inSymbol;
-    }
-    int getValue() {
-        return value;
-    }
-    string getImageFilePath() {
-        return imageFilePath;
-    }
-    string getSuit() {
-        return suit;
-    }
-    string getSymbol() {
-        return symbol;
-    }
-    void setValue(int newValue) {
-        value = newValue;
-    }
-};
+        Card(int inVal, string inImageFilePath)
+        {
+            value = inVal;
+            imageFilePath = inImageFilePath;
+        }
+        int getValue()
+        {
+            return value;
+        }
+        string getImageFilePath()
+        {
+            return imageFilePath;
+        }
+        void setValue(int newValue)
+        {
+            value = newValue;
+        }
+    };
 
 }
 

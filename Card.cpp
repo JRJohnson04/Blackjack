@@ -4,5 +4,6 @@
 
 #include "Card.h"
 
-namespace std {
+namespace std
+{
 } // std

@@ -4,5 +4,6 @@
 
 #include "Deck.h"
 
-namespace std {
+namespace std
+{
 } // std

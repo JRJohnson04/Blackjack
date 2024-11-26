@@ -75,14 +75,31 @@ namespace std
         {
             for (std::vector<Card>::size_type i = 0; i < cards.size(); ++i)
             {
-                cout << cards[i].getValue() << ", " << cards[i].getImageFilePath() << endl; // << ", " << cards[i].getSuit() << ", " << cards[i].getSymbol() << endl; suite and symbol dont matter in blackjack its just a visual
-            } // plus the image for the card will visually display those things so no point and having the code know it
+            } 
         }
         void shuffle()
         {
             auto rng = std::default_random_engine{};
             std::shuffle(cards.begin(), cards.end(), rng);
         }
+
+		//void shuffleCards() // this is the old shuffle method I have. might test it later otherwise just delete it before presentation
+        //{
+        //    std::random_device rd;
+        //    std::mt19937 rng(rd());
+        //    std::uniform_int_distribution<int> dist(11, 100);
+        //    int timesToShuffle = dist(rng);
+        //    for (int index = 0; index < timesToShuffle; index++)
+        //    {
+        //        for (int r1 = 0; r1 < 52; r1++)
+        //        {
+        //            std::uniform_int_distribution<int> cardDist(0, 51);
+        //            int r2 = cardDist(rng);
+        //            std::swap(cards[r1], cards[r2]);
+        //        }
+        //    }
+        //}
+
         Card popCard()
         {
             Card retCard = cards.back();

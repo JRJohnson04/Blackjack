@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="blackjackPseudoCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Card.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Card.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="cards\2c.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\2d.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\2h.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\2s.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\3c.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\3d.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\3h.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\3s.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\4c.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\4d.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\4h.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\4s.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\5c.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\5d.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\5h.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\5s.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\6c.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\6d.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\6h.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\6s.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\7c.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\7d.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\7h.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\7s.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\8c.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\8d.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\8h.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\8s.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\9c.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\9d.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\9h.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\9s.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\ac.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\ad.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\ah.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\as.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\jc.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\jd.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\jh.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\js.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\kc.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\kd.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\kh.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\ks.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\qc.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\qd.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\qh.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\qs.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\tc.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\td.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\th.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\ts.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+</Project>

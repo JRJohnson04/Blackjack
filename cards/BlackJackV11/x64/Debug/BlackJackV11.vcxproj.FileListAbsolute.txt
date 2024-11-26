@@ -1,0 +1,3 @@
+D:\C++\projects\BlackJackV11\BlackJackV11\x64\Debug\BlackJackV11.vcxproj.AssemblyReference.cache
+D:\C++\projects\BlackJackV11\BlackJackV11\x64\Debug\BlackJackV11.MyForm.resources
+D:\C++\projects\BlackJackV11\BlackJackV11\x64\Debug\BlackJackV11.vcxproj.GenerateResource.cache

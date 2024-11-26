@@ -30,9 +30,8 @@ public:
     {
         for (Card card : cards)
         {
-            cout << ", " << card.getValue();
+            card.getValue();
         }
-        cout << total;
     }
 };
 

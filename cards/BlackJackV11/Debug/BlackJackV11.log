@@ -1,7 +1,0 @@
-﻿  Source.cpp
-D:\C++\projects\BlackJackV11\Source.cpp(6,6): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
-D:\C++\projects\BlackJackV11\Source.cpp(9,2): error C2653: 'BlackjackV11': is not a class or namespace name
-D:\C++\projects\BlackJackV11\Source.cpp(9,16): error C2065: 'MyForm': undeclared identifier
-D:\C++\projects\BlackJackV11\Source.cpp(9,23): error C2146: syntax error: missing ';' before identifier 'form'
-D:\C++\projects\BlackJackV11\Source.cpp(9,23): error C2065: 'form': undeclared identifier
-D:\C++\projects\BlackJackV11\Source.cpp(10,25): error C2061: syntax error: identifier 'MyForm'

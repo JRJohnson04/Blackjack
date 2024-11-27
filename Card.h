@@ -20,11 +20,11 @@ namespace std
             value = inVal;
             imageFilePath = inImageFilePath;
         }
-        int getValue()
+        int GetCardValue()
         {
             return value;
         }
-        string getImageFilePath()
+        string GetCardImage()
         {
             return imageFilePath;
         }

@@ -385,7 +385,7 @@ namespace BlackJackV11 {
 			this->StartButton->TabIndex = 52;
 			this->StartButton->Text = L"Start Button placeholder";
 			this->StartButton->UseVisualStyleBackColor = true;
-			this->StartButton->Click += gcnew System::EventHandler(this, &MyForm::BigPurpleButton_Click);
+			this->StartButton->Click += gcnew System::EventHandler(this, &MyForm::StartButton_Click);
 			// 
 			// DCard4
 			// 
@@ -579,11 +579,7 @@ private: System::Void DCard5_Click(System::Object^ sender, System::EventArgs^ e)
 	}
 private: System::Void DCard4_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void BigPurpleButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-private: System::Void AcesToDealer_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-private: System::Void PutAcesFirstButton_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void StartButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void DealerLabel2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}

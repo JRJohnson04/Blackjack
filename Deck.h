@@ -6,12 +6,11 @@
 #define DECK_H
 #include "Card.h"
 #include <vector>
-#include <iostream>
 #include <algorithm>
 #include <random>
+
 namespace std
 {
-
     class Deck
     {
     private:
@@ -39,19 +38,15 @@ namespace std
                 case 9:
                 case 10:
                     filenum = to_string(i);
-                    /* code */
                     break;
                 case 11:
                     filenum = "j";
-                    /* code */
                     break;
                 case 12:
                     filenum = "q";
-                    /* code */
                     break;
                 case 13:
                     filenum = "k";
-                    /* code */
                     break;
 
                 default:
@@ -71,19 +66,14 @@ namespace std
                 cards.push_back(newCard4);
             }
         }
-        void display()
-        {
-            for (std::vector<Card>::size_type i = 0; i < cards.size(); ++i)
-            {
-            } 
-        }
         void shuffle()
         {
             auto rng = std::default_random_engine{};
             std::shuffle(cards.begin(), cards.end(), rng);
         }
 
-		//void shuffleCards() // this is the old shuffle method I have. might test it later otherwise just delete it before presentation
+
+        //void shuffleCards() // this is the old shuffle method I have. might test it later otherwise just delete it before presentation
         //{
         //    std::random_device rd;
         //    std::mt19937 rng(rd());
@@ -107,6 +97,7 @@ namespace std
             return retCard;
         }
     };
+
 } // std
 
 #endif // DECK_H

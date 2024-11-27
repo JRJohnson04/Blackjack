@@ -4,10 +4,11 @@
 
 #ifndef HAND_H
 #define HAND_H
-using namespace std;
 #include <vector>
 #include "Card.h"
 #include "Deck.h"
+using namespace std;
+
 class Hand
 {
 private:
@@ -19,20 +20,28 @@ public:
     void addCard(Card card)
     {
         cards.push_back(card);
-        total += card.getValue();
+        total += card.GetCardValue();
         // need ideas for dynamically deciding if an Ace is 1 or 11. Got nothing atm.
     }
     void reset()
     {
         cards.clear();
     }
-    void display()
-    {
-        for (Card card : cards)
-        {
-            card.getValue();
-        }
-    }
+
+	Card GetCardInfo(int i)
+	{
+		return cards[i];
+	}
+
+	int GetTheNumberOfCards()
+	{
+		return cards.size();
+	}
+
+	int GetTotal()
+	{
+		return total;
+	}
 };
 
 #endif // HAND_H

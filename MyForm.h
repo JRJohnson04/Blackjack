@@ -1,4 +1,7 @@
 #pragma once
+#include "Hand.h"
+#include "Card.h"
+#include "Deck.h"
 
 namespace BlackJackV11 {
 
@@ -44,7 +47,6 @@ namespace BlackJackV11 {
 	private: System::Windows::Forms::Label^ DealerLabel4;
 	private: System::Windows::Forms::Button^ DCard1;
 	private: System::Windows::Forms::Label^ DealerLabel5;
-
 	private: System::Windows::Forms::Button^ DCard2;
 	private: System::Windows::Forms::Label^ PlayerLabel4;
 	private: System::Windows::Forms::Label^ PTVLabel;
@@ -56,9 +58,6 @@ namespace BlackJackV11 {
 	private: System::Windows::Forms::Label^ Funds;
 	private: System::Windows::Forms::Label^ DealerLabel2;
 	private: System::Windows::Forms::Button^ StartButton;
-
-
-
 	private: System::Windows::Forms::Button^ DCard4;
 	private: System::Windows::Forms::Button^ DCard5;
 	private: System::Windows::Forms::Label^ BetAmountLabel;
@@ -71,11 +70,6 @@ namespace BlackJackV11 {
 	private: System::Windows::Forms::Button^ PCard2;
 
 	protected:
-
-
-
-
-
 
 
 
@@ -579,8 +573,8 @@ private: System::Void DCard5_Click(System::Object^ sender, System::EventArgs^ e)
 	}
 private: System::Void DCard4_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void StartButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+private: System::Void StartButton_Click(System::Object^ sender, System::EventArgs^ e);
+	   void DisplayPlayerGraphics(Hand playerHand);
 private: System::Void DealerLabel2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void Funds_Click(System::Object^ sender, System::EventArgs^ e) {

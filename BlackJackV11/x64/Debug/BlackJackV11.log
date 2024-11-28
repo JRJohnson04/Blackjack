@@ -2,5 +2,10 @@
 D:\C++\projects\BlackJackV11\Hand.h(38,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'MyForm.cpp')
   
+  Source.cpp
+D:\C++\projects\BlackJackV11\Hand.h(38,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Source.cpp')
+  
+  Generating Code...
   blackjackPseudoCode.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   BlackJackV11.vcxproj -> D:\C++\projects\BlackJackV11\x64\Debug\BlackJackV11.exe

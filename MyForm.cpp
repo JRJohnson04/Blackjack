@@ -7,82 +7,72 @@ using namespace System::Windows::Forms;
 using namespace System::Drawing;
 using namespace System::ComponentModel;
 using namespace System::Collections;
+using namespace System::Data;
+//#include "gdiplusheaders.h"
 
-namespace BlackJackV11 {
 
-    public ref class form : public System::Windows::Forms::Form
+ void BlackJackV11::MyForm::StartButton_Click(System::Object^ sender, System::EventArgs^ e) {
+    //deck->shuffle();
+    Deck deck;
+    Hand playerHand;
+    Hand dealerHand;
+    for (int i = 0; i < 2; i++)
     {
-        int WinnerDeclared = 0;
-        Deck* deck;
-        Hand* playerHand;
-        Hand* dealerHand;
-	public: form()
-	{
-		deck = new Deck();
-		playerHand = new Hand();
-		dealerHand = new Hand();
-	}
-		  //logic below is not working as it refuses to recognise the buttons and labels - once its done the rest of the logic should be really simple
-    //private: void StartButton_Click(System::Object^ sender, System::EventArgs^ e) {
-    //    deck->shuffle();
-    //    for (int i = 0; i < 2; i++)
-    //    {
-    //        playerHand->addCard(deck->popCard());
-    //        dealerHand->addCard(deck->popCard());
-    //    }
-    //    DisplayPlayerGraphics();
-    //}
-
-    //private: void DisplayPlayerGraphics() 
-    //{
-    //    for (int i = 0; i < playerHand->GetTheNumberOfCards(); i++)
-    //    {
-    //        Card acard = playerHand->GetCardInfo(i);
-    //        switch (i)
-    //        {
-    //        case 0:
-    //            PCard1->BackgroundImage = acard.GetCardImage();
-    //            PlayerLabel1->Text = ("" + acard.GetCardValue());
-    //            if (acard.GetCardValue() == 0)
-    //            {
-    //                PlayerLabel1->Text = (" ");
-    //            }
-    //            break;
-    //        case 1:
-    //            PCard2->BackgroundImage = acard.GetCardImage();
-    //            PlayerLabel2->Text = ("" + acard.GetCardValue());
-    //            if (acard.GetCardValue() == 0)
-    //            {
-    //                PlayerLabel2->Text = (" ");
-    //            }
-    //            break;
-    //        case 2:
-    //            PCard3->BackgroundImage = acard.GetCardImage();
-    //            PlayerLabel3->Text = ("" + acard.GetCardValue());
-    //            if (acard.GetCardValue() == 0)
-    //            {
-    //                PlayerLabel3->Text = (" ");
-    //            }
-    //            break;
-    //        case 3:
-    //            PCard4->BackgroundImage = acard.GetCardImage();
-    //            PlayerLabel4->Text = ("" + acard.GetCardValue());
-    //            if (acard.GetCardValue() == 0)
-    //            {
-    //                PlayerLabel4->Text = (" ");
-    //            }
-    //            break;
-    //        case 4:
-    //            PCard5->BackgroundImage = acard.GetCardImage();
-    //            PlayerLabel5->Text = ("" + acard.GetCardValue());
-    //            if (acard.GetCardValue() == 0)
-    //            {
-    //                PlayerLabel5->Text = (" ");
-    //            }
-    //            break;
-    //        }
-    //    }
-    //    PTVLabel->Text = "Total Value: " + playerHand.GetTotalValue();
-    //}
-    };
+        playerHand.addCard(deck.popCard());
+        dealerHand.addCard(deck.popCard());
+    }
+     DisplayPlayerGraphics(playerHand);
 }
+ void BlackJackV11::MyForm::DisplayPlayerGraphics(Hand playerHand)
+{
+    for (int i = 0; i < playerHand.GetTheNumberOfCards(); i++)
+    {
+        Card acard = playerHand.GetCardInfo(i);
+		String ^ filename = gcnew String(("cards/"+acard.GetCardImage()).c_str());
+        switch (i)
+        {
+        case 0:
+			PCard1->BackgroundImage = System::Drawing::Image::FromFile(filename);
+            PlayerLabel1->Text = ("" + acard.GetCardValue());
+            if (acard.GetCardValue() == 0)
+            {
+                PlayerLabel1->Text = (" ");
+            }
+            break;
+        case 1:
+            PCard2->BackgroundImage = System::Drawing::Image::FromFile(filename);
+            PlayerLabel2->Text = ("" + acard.GetCardValue());
+            if (acard.GetCardValue() == 0)
+            {
+                PlayerLabel2->Text = (" ");
+            }
+            break;
+        case 2:
+            PCard3->BackgroundImage = System::Drawing::Image::FromFile(filename);
+            PlayerLabel3->Text = ("" + acard.GetCardValue());
+            if (acard.GetCardValue() == 0)
+            {
+                PlayerLabel3->Text = (" ");
+            }
+            break;
+        case 3:
+            PCard4->BackgroundImage = System::Drawing::Image::FromFile(filename);
+            PlayerLabel4->Text = ("" + acard.GetCardValue());
+            if (acard.GetCardValue() == 0)
+            {
+                PlayerLabel4->Text = (" ");
+            }
+            break;
+        case 4:
+            PCard5->BackgroundImage = System::Drawing::Image::FromFile(filename);
+            PlayerLabel5->Text = ("" + acard.GetCardValue());
+            if (acard.GetCardValue() == 0)
+            {
+                PlayerLabel5->Text = (" ");
+            }
+            break;
+        }
+    }
+    PTVLabel->Text = "Total Value: " + playerHand.GetTotal();
+}
+

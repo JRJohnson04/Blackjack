@@ -66,29 +66,29 @@ namespace std
                 cards.push_back(newCard4);
             }
         }
-        void shuffle()
+        /*void shuffle()
         {
             auto rng = std::default_random_engine{};
             std::shuffle(cards.begin(), cards.end(), rng);
+        }*/
+
+
+        void shuffle() // this is the old shuffle method I have. might test it later otherwise just delete it before presentation
+        {
+            std::random_device rd;
+            std::mt19937 rng(rd());
+            std::uniform_int_distribution<int> dist(11, 100);
+            int timesToShuffle = dist(rng);
+            for (int index = 0; index < timesToShuffle; index++)
+            {
+                for (int r1 = 0; r1 < 52; r1++)
+                {
+                    std::uniform_int_distribution<int> cardDist(0, 51);
+                    int r2 = cardDist(rng);
+                    std::swap(cards[r1], cards[r2]);
+                }
+            }
         }
-
-
-        //void shuffleCards() // this is the old shuffle method I have. might test it later otherwise just delete it before presentation
-        //{
-        //    std::random_device rd;
-        //    std::mt19937 rng(rd());
-        //    std::uniform_int_distribution<int> dist(11, 100);
-        //    int timesToShuffle = dist(rng);
-        //    for (int index = 0; index < timesToShuffle; index++)
-        //    {
-        //        for (int r1 = 0; r1 < 52; r1++)
-        //        {
-        //            std::uniform_int_distribution<int> cardDist(0, 51);
-        //            int r2 = cardDist(rng);
-        //            std::swap(cards[r1], cards[r2]);
-        //        }
-        //    }
-        //}
 
         Card popCard()
         {

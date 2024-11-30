@@ -1,7 +1,6 @@
 #pragma once
-#include "Hand.h"
-#include "Card.h"
-#include "Deck.h"
+
+#include "Game.h"
 
 namespace BlackJackV11 {
 
@@ -15,6 +14,7 @@ namespace BlackJackV11 {
 	/// <summary>
 	/// Summary for MyForm
 	/// </summary>
+	/// 
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
@@ -25,7 +25,7 @@ namespace BlackJackV11 {
 			//TODO: Add the constructor code here
 			//
 		}
-
+		Game* game = new Game();
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -69,6 +69,7 @@ namespace BlackJackV11 {
 	private: System::Windows::Forms::Label^ PlayerLabel1;
 	private: System::Windows::Forms::Button^ PCard2;
 
+		   //declare deck playerhand and dealerhand here
 	protected:
 
 
@@ -439,7 +440,7 @@ namespace BlackJackV11 {
 			this->staybutton->Name = L"staybutton";
 			this->staybutton->Size = System::Drawing::Size(280, 181);
 			this->staybutton->TabIndex = 56;
-			this->staybutton->Text = L"Shuffle Button Placeholder";
+			this->staybutton->Text = L"Stay Button Placeholder";
 			this->staybutton->UseVisualStyleBackColor = true;
 			this->staybutton->Click += gcnew System::EventHandler(this, &MyForm::staybutton_Click);
 			// 
@@ -563,8 +564,7 @@ private: System::Void DTVLabel_Click(System::Object^ sender, System::EventArgs^ 
 	}
 private: System::Void BetAmount_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void staybutton_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+private: System::Void staybutton_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void PCard3_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void BetAmountLabel_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -575,6 +575,8 @@ private: System::Void DCard4_Click(System::Object^ sender, System::EventArgs^ e)
 	}
 private: System::Void StartButton_Click(System::Object^ sender, System::EventArgs^ e);
 	   void DisplayPlayerGraphics(Hand playerHand);
+	   void DisplayDealerGraphics(Hand dealerHand);
+	   void CheckForWinner(Hand dealerHand, Hand playerHand);
 private: System::Void DealerLabel2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void Funds_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -613,7 +615,7 @@ private: System::Void PlayerLabel3_Click(System::Object^ sender, System::EventAr
 	}
 private: System::Void PlayerLabel2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void hitbutton_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+private: System::Void hitbutton_Click(System::Object^ sender, System::EventArgs^ e);
 };
+
 }

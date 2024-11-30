@@ -36,8 +36,10 @@ namespace std
                 case 7:
                 case 8:
                 case 9:
-                case 10:
                     filenum = to_string(i);
+                    break;
+                case 10:
+                    filenum = "t";
                     break;
                 case 11:
                     filenum = "j";
@@ -71,7 +73,6 @@ namespace std
             auto rng = std::default_random_engine{};
             std::shuffle(cards.begin(), cards.end(), rng);
         }*/
-
 
         void shuffle() // this is the old shuffle method I have. might test it later otherwise just delete it before presentation
         {

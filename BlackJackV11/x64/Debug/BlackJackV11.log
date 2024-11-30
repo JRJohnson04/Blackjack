@@ -1,11 +1,16 @@
-﻿  MyForm.cpp
-D:\C++\projects\BlackJackV11\Hand.h(38,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+﻿  Deck.cpp
+  Hand.cpp
+D:\C++\projects\BlackjackV11.5\Blackjack\Hand.h(38,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Hand.cpp')
+  
+  MyForm.cpp
+D:\C++\projects\BlackjackV11.5\Blackjack\Hand.h(38,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'MyForm.cpp')
   
   Source.cpp
-D:\C++\projects\BlackJackV11\Hand.h(38,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+D:\C++\projects\BlackjackV11.5\Blackjack\Hand.h(38,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'Source.cpp')
   
   Generating Code...
   blackjackPseudoCode.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  BlackJackV11.vcxproj -> D:\C++\projects\BlackJackV11\x64\Debug\BlackJackV11.exe
+  BlackJackV11.vcxproj -> D:\C++\projects\BlackjackV11.5\Blackjack\x64\Debug\BlackJackV11.exe

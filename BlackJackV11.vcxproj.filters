@@ -47,6 +47,9 @@
     <ClInclude Include="MyForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="cards\2c.gif">
@@ -203,6 +206,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="cards\ts.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cards\CardBack.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

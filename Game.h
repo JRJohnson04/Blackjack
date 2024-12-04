@@ -9,6 +9,8 @@ public:
 	Deck deck;
 	Hand playerHand;
 	Hand dealerHand;
+	Hand player2Hand;
+	Hand player3Hand;
 	int i;
 	Game()
 	{

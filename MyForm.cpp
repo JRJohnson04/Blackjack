@@ -354,7 +354,7 @@ void BlackJackV11::MyForm::CheckForWinner(Hand dealerHand, Hand playerHand, Hand
     }
 	if (label10->Visible == true) //player 3 win lose logic
     {
-        if (playerHand.GetTotal() > 21)
+        if (player3Hand.GetTotal() > 21)
         {
             DisplayDealerGraphics(dealerHand);
             //player bust - dealer wins
@@ -366,13 +366,13 @@ void BlackJackV11::MyForm::CheckForWinner(Hand dealerHand, Hand playerHand, Hand
             //dealer bust - player wins
             WinnerPopup("Player 3", "Dealer", int(0));
         }
-        else if (playerHand.GetTotal() > dealerHand.GetTotal())
+        else if (player3Hand.GetTotal() > dealerHand.GetTotal())
         {
             DisplayDealerGraphics(dealerHand);
             //player wins
             WinnerPopup("Player 3", "Dealer", int(1));
         }
-        else if (dealerHand.GetTotal() > playerHand.GetTotal())
+        else if (dealerHand.GetTotal() > player3Hand.GetTotal())
         {
             DisplayDealerGraphics(dealerHand);
             //dealer wins

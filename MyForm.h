@@ -573,6 +573,7 @@ namespace BlackJackV11 {
 			this->label4->TabIndex = 99;
 			this->label4->Text = L"Total Value: ";
 			this->label4->Visible = false;
+			this->label4->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
 			// 
 			// label5
 			// 
@@ -1034,6 +1035,8 @@ private: System::Void Player2Checkbox_CheckedChanged(System::Object^ sender, Sys
 
 private: System::Void Player3Checkbox_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 

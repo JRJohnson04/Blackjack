@@ -185,7 +185,7 @@ void BlackJackV11::MyForm::DisplayPlayerGraphics(Hand playerHand)
 }
 void BlackJackV11::MyForm::hitbutton_Click(System::Object^ sender, System::EventArgs^ e) {
 	int i = 0;
-    if(i != 3){
+    if(i != 3 || 4){
         if (Staying1->Checked == false && Staying1->Visible == true)
         {
             i = 0;
@@ -198,13 +198,13 @@ void BlackJackV11::MyForm::hitbutton_Click(System::Object^ sender, System::Event
         {
             i = 2;
         }
-		else if(label3->Visible == false)
+		if(label3->Visible == false)
 		{
 			i = 3;
 		}
-		else if (Staying1->Checked == true && Staying2->Checked == true && Staying3->Checked == true)
+		if (Staying1->Checked == true && Staying2->Checked == true && Staying3->Checked == true)
 		{
-			i = 3;
+			i = 4;
 		}
         switch (i)
         {
@@ -240,6 +240,9 @@ void BlackJackV11::MyForm::hitbutton_Click(System::Object^ sender, System::Event
                 CheckForWinner(game->dealerHand, game->playerHand, game->player2Hand, game->player3Hand);
             }
 			break;
+        case 4:
+                CheckForWinner(game->dealerHand, game->playerHand, game->player2Hand, game->player3Hand);
+                break;
         }
 
     }
@@ -279,6 +282,17 @@ void BlackJackV11::MyForm::staybutton_Click(System::Object^ sender, System::Even
                 DisplayDealerGraphics(game->dealerHand);
                 CheckForWinner(game->dealerHand, game->playerHand, game->player2Hand, game->player3Hand);
             }
+		}
+	}
+	else {
+		if (Staying1->Checked == true && Staying2->Checked == true && Staying3->Checked == true) {
+			while (game->dealerHand.GetTotal() < 17)
+			{
+				game->dealerHand.addCard(game->deck.popCard());
+			}
+			DisplayDealerGraphics(game->dealerHand);
+			CheckForWinner(game->dealerHand, game->playerHand, game->player2Hand, game->player3Hand);
+		}
 	}
     //while (game->dealerHand.GetTotal() < 17)
     //{
@@ -287,7 +301,6 @@ void BlackJackV11::MyForm::staybutton_Click(System::Object^ sender, System::Even
     //DisplayDealerGraphics(game->dealerHand);
     //CheckForWinner(game->dealerHand, game->playerHand);
     }
-}
 void BlackJackV11::MyForm::CheckForWinner(Hand dealerHand, Hand playerHand, Hand player2Hand, Hand player3Hand)
 {
     if (playerHand.GetTotal() > 21)
@@ -460,7 +473,7 @@ void BlackJackV11::MyForm::player2Graphics(Hand player2Hand)
             break;
         }
     }
-    PTVLabel->Text = "Total Value: " + player2Hand.GetTotal();
+    label4->Text = "Total Value: " + player2Hand.GetTotal();
 }
 void BlackJackV11::MyForm::player3Graphics(Hand player3Hand)
 {
@@ -490,7 +503,7 @@ void BlackJackV11::MyForm::player3Graphics(Hand player3Hand)
             break;
         case 1:
             button9->BackgroundImage = System::Drawing::Image::FromFile(filename);
-            PlayerLabel2->Text = ("" + value);
+            label15->Text = ("" + value);
             if (value == 0)
             {
                 label15->Text = (" ");
@@ -498,18 +511,18 @@ void BlackJackV11::MyForm::player3Graphics(Hand player3Hand)
             break;
         case 2:
             button8->BackgroundImage = System::Drawing::Image::FromFile(filename);
-            label4->Text = ("" + value);
+            label14->Text = ("" + value);
             if (value == 0)
             {
-                label4->Text = (" ");
+                label14->Text = (" ");
             }
             break;
         case 3:
             button7->BackgroundImage = System::Drawing::Image::FromFile(filename);
-            label3->Text = ("" + value);
+            label13->Text = ("" + value);
             if (value == 0)
             {
-                label3->Text = (" ");
+                label13->Text = (" ");
             }
             break;
         case 4:
@@ -522,5 +535,5 @@ void BlackJackV11::MyForm::player3Graphics(Hand player3Hand)
             break;
         }
     }
-    PTVLabel->Text = "Total Value: " + player3Hand.GetTotal();
+    label11->Text = "Total Value: " + player3Hand.GetTotal();
 }

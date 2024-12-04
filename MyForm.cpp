@@ -8,7 +8,6 @@ using namespace System::Drawing;
 using namespace System::ComponentModel;
 using namespace System::Collections;
 using namespace System::Data;
-//#include "gdiplusheaders.h"
 
 static void WinnerPopup(String^ winner, String^ loser, int type) {
     String^ message;
@@ -30,9 +29,15 @@ static void WinnerPopup(String^ winner, String^ loser, int type) {
 void BlackJackV11::MyForm::StartButton_Click(System::Object^ sender, System::EventArgs^ e) {
     game = new Game();
     game->deck.shuffle();
-	DisplayDealerGraphics(game->dealerHand);
-	DisplayPlayerGraphics(game->playerHand);
-	Staying1->Checked = false;
+	DisplayDealerGraphics(game->dealerHand); //default graphics resetting
+	DisplayPlayerGraphics(game->playerHand); //default graphics resetting
+	if (label3->Visible == true) {
+		player2Graphics(game->player2Hand); //resetting player 2 graphics
+	}
+	if (label10->Visible == true) {
+		player3Graphics(game->player3Hand); //resetting player 3 graphics
+	}
+	Staying1->Checked = false; //resetting checkboxes
     Staying2->Checked = false;
 	Staying3->Checked = false;
 	Staying1->Enabled = true;
@@ -262,6 +267,9 @@ void BlackJackV11::MyForm::hitbutton_Click(System::Object^ sender, System::Event
     }*/
 }
 void BlackJackV11::MyForm::staybutton_Click(System::Object^ sender, System::EventArgs^ e) {
+	Staying1->Checked = true;
+	Staying2->Checked = true;
+	Staying3->Checked = true;
     if (label3->Visible == false) {
         if (label10->Visible == false) {
             while (game->dealerHand.GetTotal() < 17)
@@ -377,7 +385,6 @@ void BlackJackV11::MyForm::CheckForWinner(Hand dealerHand, Hand playerHand, Hand
             WinnerPopup("Player 3", "Dealer", int(2));
         }
     }
-    else{
     if (playerHand.GetTotal() > 21)
     {
         DisplayDealerGraphics(dealerHand);
@@ -408,7 +415,7 @@ void BlackJackV11::MyForm::CheckForWinner(Hand dealerHand, Hand playerHand, Hand
         //tie
         WinnerPopup("Player 1", "Dealer", int(2));
     }
- }
+ 
 }
 
 

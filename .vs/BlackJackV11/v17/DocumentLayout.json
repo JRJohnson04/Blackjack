@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{1A0A39AE-398A-42E9-8BE8-84D659609538}|BlackJackV11.vcxproj|solutionrelative:MyForm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1A0A39AE-398A-42E9-8BE8-84D659609538}|BlackJackV11.vcxproj|D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\ReadMe.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1A0A39AE-398A-42E9-8BE8-84D659609538}|BlackJackV11.vcxproj|solutionrelative:ReadMe.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1A0A39AE-398A-42E9-8BE8-84D659609538}|BlackJackV11.vcxproj|D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
       "RelativeMoniker": "D:0:0:{1A0A39AE-398A-42E9-8BE8-84D659609538}|BlackJackV11.vcxproj|solutionrelative:MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     },
@@ -57,7 +61,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -69,18 +73,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "ReadMe.txt",
+              "DocumentMoniker": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\ReadMe.txt",
+              "RelativeDocumentMoniker": "ReadMe.txt",
+              "ToolTip": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\ReadMe.txt",
+              "RelativeToolTip": "ReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAADOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-12-04T17:48:33.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "vector",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
               "ViewState": "AgIAAIQHAAAAAAAAAADgv5cHAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-12-04T14:17:16.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T14:17:16.204Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Game.h",
               "DocumentMoniker": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\Game.h",
               "RelativeDocumentMoniker": "Game.h",
@@ -88,8 +104,7 @@
               "RelativeToolTip": "Game.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-04T11:42:42.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T11:42:42.727Z"
             },
             {
               "$type": "Document",
@@ -99,14 +114,14 @@
               "RelativeDocumentMoniker": "MyForm.cpp",
               "ToolTip": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\MyForm.cpp",
               "RelativeToolTip": "MyForm.cpp",
-              "ViewState": "AgIAAO0BAAAAAAAAAAAAAAACAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAmwBIBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-03T22:10:59.835Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MyForm.h",
               "DocumentMoniker": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\MyForm.h",
               "RelativeDocumentMoniker": "MyForm.h",
@@ -114,12 +129,11 @@
               "RelativeToolTip": "MyForm.h",
               "ViewState": "AgIAAOsDAAAAAAAAAAAawA4EAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-03T20:42:20.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T20:42:20.994Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Source.cpp",
               "DocumentMoniker": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\Source.cpp",
               "RelativeDocumentMoniker": "Source.cpp",
@@ -131,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Card.h",
               "DocumentMoniker": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\Card.h",
               "RelativeDocumentMoniker": "Card.h",
@@ -143,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Deck.h",
               "DocumentMoniker": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\Deck.h",
               "RelativeDocumentMoniker": "Deck.h",
@@ -155,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Hand.h",
               "DocumentMoniker": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\Hand.h",
               "RelativeDocumentMoniker": "Hand.h",
@@ -167,19 +181,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MyForm.h [Design]",
               "DocumentMoniker": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\MyForm.h",
               "RelativeDocumentMoniker": "MyForm.h",
               "ToolTip": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\MyForm.h [Design]",
               "RelativeToolTip": "MyForm.h [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-30T03:47:16.337Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-30T03:47:16.337Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Card.cpp",
               "DocumentMoniker": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\Card.cpp",
               "RelativeDocumentMoniker": "Card.cpp",
@@ -191,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Hand.cpp",
               "DocumentMoniker": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\Hand.cpp",
               "RelativeDocumentMoniker": "Hand.cpp",
@@ -203,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Deck.cpp",
               "DocumentMoniker": "D:\\C\u002B\u002B\\projects\\BlackjackV11.5\\Blackjack\\Deck.cpp",
               "RelativeDocumentMoniker": "Deck.cpp",

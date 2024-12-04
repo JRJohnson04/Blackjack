@@ -1,0 +1,2 @@
+This application was made to run in Visual Studio 2022 and .NET 6.0.1. If you are using a different version of Visual Studio or .NET, you may need to update the project files to match your version.
+You may also need to change the entry point file for the project which is configurable in the project properties -> linker -> advanced -> entry point. Set the entry point to `main` if it is not already set.

@@ -35,24 +35,27 @@ void BlackJackV11::MyForm::StartButton_Click(System::Object^ sender, System::Eve
 	Staying1->Checked = false;
     Staying2->Checked = false;
 	Staying3->Checked = false;
+	Staying1->Enabled = true;
+	Staying2->Enabled = true;
+	Staying3->Enabled = true;
     for (int i = 0; i < 2; i++)
     {
         game->playerHand.addCard(game->deck.popCard());
         game->dealerHand.addCard(game->deck.popCard());
-        if (label10->Visible == true) {
-            game->player3Hand.addCard(game->deck.popCard());
-        }
 		if (label3->Visible == true) {
 			game->player2Hand.addCard(game->deck.popCard());
 		}
+        if (label10->Visible == true) {
+            game->player3Hand.addCard(game->deck.popCard());
+        }
     }
     //DisplayDealerGraphics(game->dealerHand); 
     DisplayPlayerGraphics(game->playerHand);
-	if (label10->Visible) {
-		player3Graphics(game->player3Hand);
-	}
 	if (label3->Visible) {
 		player2Graphics(game->player2Hand);
+	}
+	if (label10->Visible) {
+		player3Graphics(game->player3Hand);
 	}
 }
 
@@ -185,27 +188,29 @@ void BlackJackV11::MyForm::DisplayPlayerGraphics(Hand playerHand)
 }
 void BlackJackV11::MyForm::hitbutton_Click(System::Object^ sender, System::EventArgs^ e) {
 	int i = 0;
-    if(i != 3 || 4){
-        if (Staying1->Checked == false && Staying1->Visible == true)
-        {
-            i = 0;
-        }
-        else if (Staying2->Checked == false && Staying1->Visible == true)
-        {
-            i = 1;
-        }
-        else if (Staying3->Checked == false && Staying1->Visible == true)
-        {
-            i = 2;
-        }
-		if(label3->Visible == false)
-		{
-			i = 3;
-		}
-		if (Staying1->Checked == true && Staying2->Checked == true && Staying3->Checked == true)
-		{
-			i = 4;
-		}
+	if (label3->Visible == false) //if only one player is playing
+	{
+		i = 3;
+	}
+	if (Staying3->Checked == false && Staying3->Visible == true) //if multiple players are playing and player three isn't staying
+    {
+        i = 2;
+    }
+	if (Staying2->Checked == false && Staying2->Visible == true) //if multiple players are playing and player two isn't staying
+    {
+        i = 1;
+    }
+	if (Staying1->Checked == false && Staying1->Visible == true) //if multiple players are playing and player one isn't staying
+    {
+        i = 0;
+    }
+    if (Staying1->Checked == true && Staying2->Checked == true && Staying2->Visible == true && Staying3->Visible == false) { //if only two players are playing
+        i = 4;
+    }
+	if (Staying1->Checked == true && Staying2->Checked == true && Staying3->Checked == true && Staying3->Visible == true) //if all players are staying
+	{
+		i = 4;
+	}
         switch (i)
         {
         case 0:
@@ -214,6 +219,7 @@ void BlackJackV11::MyForm::hitbutton_Click(System::Object^ sender, System::Event
 			if (game->playerHand.GetTotal() >= 21)
 			{
 				Staying1->Checked = true;
+				Staying1->Enabled = false;
 			}
             break;
         case 1:
@@ -222,6 +228,7 @@ void BlackJackV11::MyForm::hitbutton_Click(System::Object^ sender, System::Event
 			if (game->player2Hand.GetTotal() >= 21)
 			{
 				Staying2->Checked = true;
+				Staying2->Enabled = false;
 			}
             break;
         case 2:
@@ -230,6 +237,7 @@ void BlackJackV11::MyForm::hitbutton_Click(System::Object^ sender, System::Event
 			if (game->player3Hand.GetTotal() >= 21)
 			{
 				Staying3->Checked = true;
+				Staying3->Enabled = false;
 			}
             break;
 		case 3:
@@ -245,7 +253,7 @@ void BlackJackV11::MyForm::hitbutton_Click(System::Object^ sender, System::Event
                 break;
         }
 
-    }
+    
     /*game->playerHand.addCard(game->deck.popCard());
     DisplayPlayerGraphics(game->playerHand);
     if (game->playerHand.GetTotal() >= 21)
@@ -254,27 +262,18 @@ void BlackJackV11::MyForm::hitbutton_Click(System::Object^ sender, System::Event
     }*/
 }
 void BlackJackV11::MyForm::staybutton_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (label3->Visible == false) {
-		if (label10->Visible == false) {
+    if (label3->Visible == false) {
+        if (label10->Visible == false) {
             while (game->dealerHand.GetTotal() < 17)
             {
                 game->dealerHand.addCard(game->deck.popCard());
             }
-			DisplayDealerGraphics(game->dealerHand);
+            DisplayDealerGraphics(game->dealerHand);
             CheckForWinner(game->dealerHand, game->playerHand, game->player2Hand, game->player3Hand);
         }
-    else if(label3->Visible == true && label10->Visible == false) {
-			if (Staying2->Checked == true && Staying1->Checked == true) {
-				while (game->dealerHand.GetTotal() < 17)
-				{
-					game->dealerHand.addCard(game->deck.popCard());
-				}
-                DisplayDealerGraphics(game->dealerHand);
-                CheckForWinner(game->dealerHand, game->playerHand, game->player2Hand, game->player3Hand);
-            }
     }
-    else if (label10->Visible == true && label3->Visible == true) {
-            if (Staying3->Checked == true && Staying2->Checked ==true) {
+        else if (label3->Visible == true && label10->Visible == false) {
+            if (Staying2->Checked == true && Staying1->Checked == true) {
                 while (game->dealerHand.GetTotal() < 17)
                 {
                     game->dealerHand.addCard(game->deck.popCard());
@@ -282,57 +281,134 @@ void BlackJackV11::MyForm::staybutton_Click(System::Object^ sender, System::Even
                 DisplayDealerGraphics(game->dealerHand);
                 CheckForWinner(game->dealerHand, game->playerHand, game->player2Hand, game->player3Hand);
             }
-		}
-	}
-	else {
-		if (Staying1->Checked == true && Staying2->Checked == true && Staying3->Checked == true) {
-			while (game->dealerHand.GetTotal() < 17)
-			{
-				game->dealerHand.addCard(game->deck.popCard());
-			}
-			DisplayDealerGraphics(game->dealerHand);
-			CheckForWinner(game->dealerHand, game->playerHand, game->player2Hand, game->player3Hand);
-		}
-	}
-    //while (game->dealerHand.GetTotal() < 17)
-    //{
-    //    game->dealerHand.addCard(game->deck.popCard());
-    //}
-    //DisplayDealerGraphics(game->dealerHand);
-    //CheckForWinner(game->dealerHand, game->playerHand);
-    }
+        }
+        else if (label10->Visible == true && label3->Visible == true) {
+            if (Staying3->Checked == true && Staying2->Checked == true) {
+                while (game->dealerHand.GetTotal() < 17)
+                {
+                    game->dealerHand.addCard(game->deck.popCard());
+                }
+                DisplayDealerGraphics(game->dealerHand);
+                CheckForWinner(game->dealerHand, game->playerHand, game->player2Hand, game->player3Hand);
+            }
+
+        }
+        else {
+            if (Staying1->Checked == true && Staying2->Checked == true && Staying3->Checked == true) {
+                while (game->dealerHand.GetTotal() < 17)
+                {
+                    game->dealerHand.addCard(game->deck.popCard());
+                }
+                DisplayDealerGraphics(game->dealerHand);
+                CheckForWinner(game->dealerHand, game->playerHand, game->player2Hand, game->player3Hand);
+            }
+        }
+        //while (game->dealerHand.GetTotal() < 17)
+        //{
+        //    game->dealerHand.addCard(game->deck.popCard());
+        //}
+        //DisplayDealerGraphics(game->dealerHand);
+        //CheckForWinner(game->dealerHand, game->playerHand);
+}
 void BlackJackV11::MyForm::CheckForWinner(Hand dealerHand, Hand playerHand, Hand player2Hand, Hand player3Hand)
 {
+    if (label3->Visible == true){ //player 2 win lose logic
+        if (player2Hand.GetTotal() > 21)
+        {
+            DisplayDealerGraphics(dealerHand);
+            //player bust - dealer wins
+            WinnerPopup("Dealer", "Player 2", int(0));
+        }
+        else if (dealerHand.GetTotal() > 21)
+        {
+            DisplayDealerGraphics(dealerHand);
+            //dealer bust - player wins
+            WinnerPopup("Player 2", "Dealer", int(0));
+        }
+        else if (player2Hand.GetTotal() > dealerHand.GetTotal())
+        {
+            DisplayDealerGraphics(dealerHand);
+            //player wins
+            WinnerPopup("Player 2", "Dealer", int(1));
+        }
+        else if (dealerHand.GetTotal() > player2Hand.GetTotal())
+        {
+            DisplayDealerGraphics(dealerHand);
+            //dealer wins
+            WinnerPopup("Dealer", "Player 2", int(1));
+        }
+        else
+        {
+            DisplayDealerGraphics(dealerHand);
+            //tie
+            WinnerPopup("Player 2", "Dealer", int(2));
+        }
+    }
+	if (label10->Visible == true) //player 3 win lose logic
+    {
+        if (playerHand.GetTotal() > 21)
+        {
+            DisplayDealerGraphics(dealerHand);
+            //player bust - dealer wins
+            WinnerPopup("Dealer", "Player 3", int(0));
+        }
+        else if (dealerHand.GetTotal() > 21)
+        {
+            DisplayDealerGraphics(dealerHand);
+            //dealer bust - player wins
+            WinnerPopup("Player 3", "Dealer", int(0));
+        }
+        else if (playerHand.GetTotal() > dealerHand.GetTotal())
+        {
+            DisplayDealerGraphics(dealerHand);
+            //player wins
+            WinnerPopup("Player 3", "Dealer", int(1));
+        }
+        else if (dealerHand.GetTotal() > playerHand.GetTotal())
+        {
+            DisplayDealerGraphics(dealerHand);
+            //dealer wins
+            WinnerPopup("Dealer", "Player 3", int(1));
+        }
+        else
+        {
+            DisplayDealerGraphics(dealerHand);
+            //tie
+            WinnerPopup("Player 3", "Dealer", int(2));
+        }
+    }
+    else{
     if (playerHand.GetTotal() > 21)
     {
-		DisplayDealerGraphics(dealerHand);
+        DisplayDealerGraphics(dealerHand);
         //player bust - dealer wins
-        WinnerPopup("Dealer", "Player", int(0));
+        WinnerPopup("Dealer", "Player 1", int(0));
     }
     else if (dealerHand.GetTotal() > 21)
     {
-		DisplayDealerGraphics(dealerHand);
+        DisplayDealerGraphics(dealerHand);
         //dealer bust - player wins
-        WinnerPopup("Player", "Dealer", int(0));
+        WinnerPopup("Player 1", "Dealer", int(0));
     }
     else if (playerHand.GetTotal() > dealerHand.GetTotal())
     {
-		DisplayDealerGraphics(dealerHand);
+        DisplayDealerGraphics(dealerHand);
         //player wins
-        WinnerPopup("Player", "Dealer", int(1));
+        WinnerPopup("Player 1", "Dealer", int(1));
     }
     else if (dealerHand.GetTotal() > playerHand.GetTotal())
     {
-		DisplayDealerGraphics(dealerHand);
+        DisplayDealerGraphics(dealerHand);
         //dealer wins
-        WinnerPopup("Dealer", "Player", int(1));
+        WinnerPopup("Dealer", "Player 1", int(1));
     }
     else
     {
-		DisplayDealerGraphics(dealerHand);
+        DisplayDealerGraphics(dealerHand);
         //tie
-        WinnerPopup("Player", "Dealer", int(2));
+        WinnerPopup("Player 1", "Dealer", int(2));
     }
+ }
 }
 
 

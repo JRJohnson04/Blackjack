@@ -18,7 +18,7 @@ static void WinnerPopup(String^ winner, String^ loser, int type) {
         message = ("" + loser + " bust " + winner + " Wins!");
         break;
     case 1: //normal win
-        message = ("" + winner + " Wins!");
+        message = ("" + winner + " Wins!" + loser + " lost!");
         break;
     case 2: //tie
         message = ("It's a tie!");
